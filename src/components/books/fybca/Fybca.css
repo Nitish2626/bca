@@ -1,0 +1,10 @@
+#btn{
+    width:40vw;
+    padding:1vh 0;
+    border-radius: 10px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}

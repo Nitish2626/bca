@@ -1,0 +1,42 @@
+import "./English.css";
+import { useContext, useEffect, useState } from "react";
+import Backbtn from "../../../back button/Backbtn";
+import QuestionAndAnswer from "../../../qna/QuestionAndAnswer";
+import Context from "../../../context/Context";
+import axios from "axios";
+
+const English=()=>{
+
+    const {setNavigate}=useContext(Context);
+    setNavigate("/faq/fybca");
+
+    const [faqs,setFaqs]=useState([]);
+
+    useEffect(()=>{
+        const fetch=()=>{
+            axios.get("http://localhost:2000/english")
+            .then((res)=>{
+                const faq=res.data;
+                setFaqs(faq);
+            })
+            .catch((e)=>{
+                console.log(e);
+            })
+        }
+        fetch();
+    },[]);
+
+    return(
+        <div id="english">
+            <Backbtn />
+
+            <h3>English Communication FAQ</h3>
+
+            {faqs.map((q,i)=>{
+                return <QuestionAndAnswer key={i} question={q.question} answer={q.answer} year={q.year} />
+            })}
+        </div>
+    );    
+};
+
+export default English;

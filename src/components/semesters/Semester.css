@@ -1,0 +1,17 @@
+.h2{
+    text-align: center;
+    color:rgb(43, 196, 145);
+    border-radius: 10px;
+    margin:0;
+    padding:8.5vh 0 2vh 0;
+}
+.semester-section1,.semester-section2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:4vh;
+}
+.semester-section2{
+    padding: 0 0 15vh 0;
+}

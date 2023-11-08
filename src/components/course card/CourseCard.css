@@ -1,0 +1,16 @@
+#course-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:45vw;
+    padding:3vh 2vw;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 1px 1px 10px 0px rgb(179, 177, 177);
+}
+#course-card span{
+    font-size: 3vh;
+    text-align: center;
+}
