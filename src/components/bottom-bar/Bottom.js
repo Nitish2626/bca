@@ -7,25 +7,25 @@ import quiz from "../../icons/quiz.png";
 
 const Bottom = () => {
   return (
-    <>
-      <footer>
-        <NavLink to="/books" className="navlink">
-          <img src={book} className="img"></img>
-        </NavLink>
+    <footer className="w-full flex justify-evenly bg-slate-200 fixed rounded-tl-2xl rounded-tr-2xl">
 
-        <NavLink to="/pyq" className="navlink">
-            <img src={pyq} className="img"></img>
-        </NavLink>
+      <NavLink to="/books" className="w-11 flex items-center justify-center bg-transparent rounded-full py-1">
+        <img src={book} className="w-8 h-8"></img>
+      </NavLink>
 
-        <NavLink to="/faq" className="navlink">
-            <img src={faq} className="img"></img>
-        </NavLink>
+      <NavLink to="/pyq" className="w-11 flex items-center justify-center bg-transparent rounded-full">
+        <img src={pyq} className="w-8 h-8"></img>
+      </NavLink>
 
-        <NavLink to="/videos" className="navlink">
-            <img src={quiz} className="img"></img>
-        </NavLink>
-      </footer>
-    </>
+      <NavLink to="/faq" className="w-11 flex items-center justify-center bg-transparent rounded-full">
+        <img src={faq} className="w-8 h-8"></img>
+      </NavLink>
+
+      <NavLink to="/videos" className="w-11 flex items-center justify-center bg-transparent rounded-full">
+        <img src={quiz} className="w-8 h-8"></img>
+      </NavLink>
+
+    </footer>
   );
 };
 export default Bottom;

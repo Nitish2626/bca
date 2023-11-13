@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import "./CourseCard.css";
 
 const CourseCard=(props)=>{
     return(
-        <Link to={props.link} id="course-card" style={{backgroundColor:`${props.color}`}}>
-            <span>{props.name}</span>
+
+        <Link to={props.link} style={{backgroundColor:`${props.color}`}} className="w-36 h-20 flex items-center justify-center text-white border-none rounded-xl shadow-[1px_1px_10px_0px_grey]">
+
+            <span className="text-center text-lg">{props.name}</span>
+
         </Link>
     );
 };

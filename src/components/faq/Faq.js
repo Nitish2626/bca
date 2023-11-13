@@ -1,10 +1,11 @@
 import Links from "../links/Links";
-import "./Faq.css";
 
 const Faq=()=>{
     return (
-        <div id="faq">
+        <div className="w-full h-96 flex items-center justify-center">
+
             <Links fybca={"/faq/fybca"} sybca={"/faq/sybca"} tybca={"/faq/tybca"} color={"orange"} />
+
         </div>
     );
 }

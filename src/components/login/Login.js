@@ -1,10 +1,10 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import "./Login.css";
 import mail from "../../icons/email.png";
 import pw from "../../icons/password.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Section from "../section/Section";
 
 const Login = (props) => {
 
@@ -72,29 +72,24 @@ const Login = (props) => {
     }
 
     return (
-        <div id="login-div">
-            <form method="post" id="login-form" onSubmit={submit}>
+        <div className="w-full h-screen flex flex-col items-center justify-center">
 
-                <section className="login-section">
-                    <img src={mail} className="login-icon"></img>
-                    <input type="email" className="login-input" id="email" placeholder="Email" onChange={emailChange} value={email}></input>
-                </section>
-                <span className="login-span">{emailspan}</span>
+            <form method="post" className="w-11/12 flex flex-col items-center justify-center rounded-lg shadow-[0px_0px_5px_0px_black] py-4" onSubmit={submit}>
 
-                <section className="login-section">
-                    <img src={pw} className="login-icon"></img>
-                    <input type="password" className="login-input" id="password" placeholder="Password" onChange={passwordChange} value={password}></input>
-                </section>
-                <span className="login-span">{passwordspan}</span>
+                <Section src={mail} type="email" id="email" placeholder="Email" change={emailChange} value={email} span={emailspan} /> 
 
-                <button type="submit" id="login-btn">
-                    <img id="login-icon"></img>
+                <Section src={pw} type="password" id="password" placeholder="Password" change={passwordChange} value={password} span={passwordspan} />
+
+                <button type="submit" className="w-28 h-9 flex items-center justify-evenly bg-blue-500 rounded-lg text-white mt-2 text-lg shadow-[2px_2px_10px_0px_grey] hover:bg-white hover:text-blue-500">
+
+                    <img className="w-6 h-6"></img>
+
                     Login
                 </button>
 
-                <span>OR</span>
+                <span className="mt-2 text-gray-400">OR</span>
 
-                <Link to="/signup">Signup</Link>
+                <Link to="/signup" className="text-blue-400 text-lg font-semibold">Signup</Link>
 
             </form>
         </div>
