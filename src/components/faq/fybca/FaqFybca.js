@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import SemContainer from "../../sem container/SemContainer";
-import "./FaqFybca.css";
 import Context from "../../context/Context";
 
 const FaqFybca=()=>{

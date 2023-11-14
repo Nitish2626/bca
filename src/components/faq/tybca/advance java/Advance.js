@@ -1,4 +1,3 @@
-import "./Advance.css";
 import { useContext,useState,useEffect } from "react";
 import Backbtn from "../../../back button/Backbtn";
 import QuestionAndAnswer from "../../../qna/QuestionAndAnswer";
@@ -27,10 +26,12 @@ const Advance=()=>{
     }, []);
 
     return(
-        <div id="advance">
+        <div>
             <Backbtn />
             
-            <h3>Advance Java FAQ</h3>
+            <h3 className="text-orange-400 text-center pt-10 text-lg mb-5 font-semibold">
+                Advance Java FAQ
+            </h3>
 
             {faqs.map((q, i) => {
                 return <QuestionAndAnswer key={i} question={q.question} answer={q.answer} year={q.year} />

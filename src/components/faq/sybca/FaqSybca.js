@@ -1,4 +1,3 @@
-import "./FaqSybca.css";
 import SemContainer from "../../sem container/SemContainer";
 import { useContext } from "react";
 import Context from "../../context/Context";

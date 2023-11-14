@@ -1,4 +1,3 @@
-import "./Fybca.css";
 import { useState,useEffect,useContext } from "react";
 import Context from "../../context/Context";
 import Semester from "../../semesters/Semester";

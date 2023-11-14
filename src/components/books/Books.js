@@ -1,4 +1,3 @@
-import "./Books.css";
 import Links from "../links/Links";
 import { useLocation } from "react-router-dom";
 
@@ -10,8 +9,10 @@ const Books = (props) => {
     }
 
     return (
-        <div id="books-btn-div">
+        <div className="w-full h-96 flex items-center justify-center">
+
             <Links fybca={"/books/fybca"} sybca={"/books/sybca"} tybca={"/books/tybca"} color={"rgb(43, 196, 145)"} />
+
         </div>
     );
 }

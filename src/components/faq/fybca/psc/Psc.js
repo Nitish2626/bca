@@ -1,4 +1,3 @@
-import "./Psc.css";
 import { useContext,useState,useEffect } from "react";
 import Backbtn from "../../../back button/Backbtn";
 import QuestionAndAnswer from "../../../qna/QuestionAndAnswer";
@@ -27,10 +26,12 @@ const Psc=()=>{
     },[]);
 
     return(
-        <div id="psc">
+        <div>
             <Backbtn />
 
-            <h3>Problem Solving using Computer FAQ</h3>
+            <h3 className="text-orange-400 text-center pt-10 text-lg mb-5 font-semibold">
+                Problem Solving using Computer FAQ
+            </h3>
 
             {faqs.map((q,i)=>{
                 return <QuestionAndAnswer key={i} question={q.question} answer={q.answer} year={q.year} />

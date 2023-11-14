@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import "./NotFound.css";
 
 const NotFound=(props)=>{
 
@@ -12,8 +11,10 @@ const NotFound=(props)=>{
     }
 
     return (
-        <div id="not-found">
-            <h2>404 ! Page Not Found</h2>
+        <div className="w-full h-screen flex items-center justify-center">
+
+            <h2 className="text-xl">404 ! Page Not Found</h2>
+            
         </div>
     );
 }

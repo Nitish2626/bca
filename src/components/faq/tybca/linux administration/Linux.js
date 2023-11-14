@@ -1,4 +1,3 @@
-import "./Linux.css";
 import { useContext,useState,useEffect } from "react";
 import QuestionAndAnswer from "../../../qna/QuestionAndAnswer";
 import Context from "../../../context/Context";
@@ -27,10 +26,12 @@ const Linux=()=>{
     }, []);
 
     return(
-        <div id="linux">
+        <div>
             <Backbtn />
             
-            <h3>Linux Administration FAQ</h3>
+            <h3 className="text-orange-400 text-center pt-10 text-lg mb-5 font-semibold">
+                Linux Administration FAQ
+            </h3>
 
             {faqs.map((q, i) => {
                 return <QuestionAndAnswer key={i} question={q.question} answer={q.answer} year={q.year} />
