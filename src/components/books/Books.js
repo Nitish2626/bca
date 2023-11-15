@@ -11,7 +11,7 @@ const Books = (props) => {
     return (
         <div className="w-full h-96 flex items-center justify-center">
 
-            <Links fybca={"/books/fybca"} sybca={"/books/sybca"} tybca={"/books/tybca"} color={"rgb(43, 196, 145)"} />
+            <Links fybca={"/books/fybca"} sybca={"/books/sybca"} tybca={"/books/tybca"} color={"green-600"} />
 
         </div>
     );

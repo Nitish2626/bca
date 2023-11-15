@@ -5,7 +5,7 @@ const Links=(props)=>{
     return(
         <section className="flex flex-col items-center justify-center gap-6">
 
-            <Link to={props.fybca} className="w-36 h-10 bg-white flex items-center justify-center text-2xl rounded-md shadow-[2px_2px_10px_0px_grey] hover:bg-green-500" style={{color:props.color}}>
+            <Link to={props.fybca} className={`w-36 h-10 bg-white flex items-center justify-center text-2xl rounded-md shadow-[2px_2px_10px_0px_grey] text-${props.color} hover:bg-${props.color} hover:text-white`} >
                 Fybca
             </Link>
 
