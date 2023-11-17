@@ -8,22 +8,22 @@ const FaqSybca = () => {
         {
             name:"Python Programming",
             link:"/faq/sybca/python",
-            color:"red"
+            bgcolor:"bg-red-600"
         },
         {
             name:"Web Technologies",
             link:"/faq/sybca/webtech",
-            color:"grey"
+            bgcolor:"bg-gray-700"
         },
         {
             name:"Operating System",
             link:"/faq/sybca/os",
-            color:"pink"
+            bgcolor:"bg-pink-500"
         },
         {
             name:"Introduction to RDBMS",
             link:"/faq/sybca/dbms",
-            color:"lightseagreen"
+            bgcolor:"bg-green-400"
         }
     ]
 
@@ -31,22 +31,22 @@ const FaqSybca = () => {
         {
             name:"Software Engineering",
             link:"/faq/sybca/se",
-            color:"lightblue"
+            bgcolor:"bg-blue-700",
         },
         {
             name:"Java Programming",
             link:"/faq/sybca/java",
-            color:"yellow"
+            bgcolor:"bg-yellow-500",
         },
         {
             name:"Financial and Investment Skills",
             link:"/faq/sybca/fis",
-            color:"orangered"
+            bgcolor:"bg-orange-500",
         },
         {
             name:"Computer System Architecture",
             link:"/faq/sybca/csa",
-            color:"cornflowerblue"
+            bgcolor:"bg-blue-400",
         }
     ]
 

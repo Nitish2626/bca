@@ -8,22 +8,22 @@ const FaqFybca=()=>{
         {
             name:"English Communication",
             link:"/faq/fybca/english",
-            color:"orange"
+            bgcolor:"bg-orange-500"
         },
         {
             name:"Maths",
             link:"/faq/fybca/maths",
-            color:"blue"
+            bgcolor:"bg-blue-500"
         },
         {
             name:"Problem solving using Computer",
             link:"/faq/fybca/psc",
-            color:"green"
+            bgcolor:"bg-green-500"
         },
         {
             name:"Oops and C++",
             link:"/faq/fybca/oops",
-            color:"skyblue"
+            bgcolor:"bg-blue-400"
         },
     ]
 
@@ -31,22 +31,22 @@ const FaqFybca=()=>{
         {
             name:"Statistical Techniques",
             link:"/faq/fybca/statistics",
-            color:"orange"
+            bgcolor:"bg-orange-500"
         },
         {
             name:"Computer Network",
             link:"/faq/fybca/cn",
-            color:"blue"
+            bgcolor:"bg-blue-500"
         },
         {
             name:"Data Structures through C++",
             link:"/faq/fybca/dsa",
-            color:"green"
+            bgcolor:"bg-green-500"
         },
         {
             name:"EVS",
             link:"/faq/fybca/evs",
-            color:"skyblue"
+            bgcolor:"bg-blue-400"
         }
     ]
 

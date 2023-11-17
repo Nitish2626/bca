@@ -8,22 +8,22 @@ const FaqTybca=()=>{
         {
             name:"Ecommerce Technology",
             link:"/faq/tybca/ecommerce",
-            color:"lightgreen"
+            bgcolor:"bg-green-500"
         },
         {
             name:"Advance Java",
             link:"/faq/tybca/advance",
-            color:"hotpink"
+            bgcolor:"bg-pink-600"
         },
         {
             name:"Quantitative Aptitude",
             link:"/faq/tybca/qa",
-            color:"brown"
+            bgcolor:"bg-red-600"
         },
         {
             name:"Linux Administration",
             link:"/faq/tybca/linux",
-            color:"orange"
+            bgcolor:"bg-orange-600"
         },
     ]
 
@@ -31,17 +31,17 @@ const FaqTybca=()=>{
         {
             name:"Android Programming",
             link:"/faq/tybca/android",
-            color:"green"
+            bgcolor:"bg-green-700"
         },
         {
             name:"PHP Programming",
             link:"/faq/tybca/php",
-            color:"skyblue"
+            bgcolor:"bg-blue-400"
         },
         {
             name:"Personality and Career Skills",
             link:"/faq/tybca/pcs",
-            color:"pink"
+            bgcolor:"bg-pink-700"
         }
     ]
 

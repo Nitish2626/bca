@@ -1,30 +1,15 @@
 import Backbtn from "../back button/Backbtn";
-import CourseCard from "../course card/CourseCard";
-import "./SemContainer.css";
+import Sem from "../sem/Sem";
 
 const SemContainer = (props) => {
     return (
-        <section id="sem-container">
+        <section>
 
             <Backbtn text={props.text} />
 
-            <h2 className="sem-h2">{props.sem1}</h2>
-            <section className="sem-container-section1">
+            <Sem sem={props.sem1} sub={props.sub1} />
 
-                {props.sub1.map((i,index) => {
-                    return <CourseCard key={index} link={i.link} name={i.name} color={i.color} />
-                })}
-
-            </section>
-
-            <h2 className="sem-h2">{props.sem2}</h2>
-            <section className="sem-container-section2">
-
-                {props.sub2.map((i,index) => {
-                    return <CourseCard key={index} link={i.link} name={i.name} color={i.color} />
-                })}
-
-            </section>
+            <Sem sem={props.sem2} sub={props.sub2} mb="mb-20" />
 
         </section>
     );
