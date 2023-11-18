@@ -1,5 +1,4 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./Signup.css";
 import user from "../../icons/user.png";
 import mail from "../../icons/email.png";
 import pw from "../../icons/password.png";
@@ -7,6 +6,7 @@ import cpw from "../../icons/cpassword.png";
 import signup from "../../icons/signup.png";
 import { useState } from "react";
 import axios from "axios";
+import Section from "../section/Section";
 
 const Signup = (props) => {
 
@@ -129,41 +129,33 @@ const Signup = (props) => {
 
 
     return (
-        <div id="signup-div">
-            <form method="post" id="signup-form" onSubmit={submit}>
+        <div className="w-full h-screen flex items-center justify-center">
 
-                <section className="signup-section">
-                    <img src={user} className="signup-icon"></img>
-                    <input type="text" id="username" className="signup-input" placeholder="Username" onChange={usernameChange} value={username}></input>
-                </section>
-                <span className="span">{userspan}</span>
+            <form method="post" className="w-11/12 flex flex-col items-center justify-center rounded-md py-3 shadow-[0px_0px_5px_0px_black]" onSubmit={submit}>
 
-                <section className="signup-section">
-                    <img src={mail} className="signup-icon"></img>
-                    <input type="email" className="signup-input" id="email" placeholder="Email" onChange={emailChange} value={email}></input>
-                </section>
-                <span className="signup-span">{emailspan}</span>
+                <Section src={user} type="text" id="username" placeholder="Username" change={usernameChange} value={username} span={userspan} />
 
-                <section className="signup-section">
-                    <img src={pw} className="signup-icon"></img>
-                    <input type="password" className="signup-input" id="password" placeholder="Password" onChange={passwordChange} value={password}></input>
-                </section>
-                <span className="signup-signup-span">{passwordspan}</span>
+                <Section src={mail} type="email" id="email" placeholder="Email" change={emailChange} value={email} span={emailspan} />
 
-                <section className="signup-section">
-                    <img src={cpw} className="signup-icon"></img>
-                    <input type="password" className="signup-input" id="cpassword" placeholder="Confirm Password" onChange={cpasswordChange} value={cpassword}></input>
-                </section>
-                <span className="signup-span">{cpasswordspan}</span>
+                <Section src={pw} type="password" id="password" placeholder="Password" change={passwordChange} value={password} span={passwordspan} />
 
-                <button type="submit" id="signup-btn">
-                    <img src={signup} id="signup-icon"></img>
+                <Section src={cpw} type="password" id="cpassword" placeholder="Confirm Password" change={cpasswordChange} value={cpassword} span={cpasswordspan} />
+
+                <button type="submit" className="w-28 h-9 flex items-center justify-evenly bg-blue-600 text-white rounded-lg text-lg my-3 shadow-[2px_2px_10px_0px_grey] hover:bg-white hover:text-blue-600">
+
+                    <img src={signup} className="w-6 h-6"></img>
+
                     Sign Up
+
                 </button>
 
-                <span>OR</span>
+                <span className="my-2 text-gray-400">
+                    OR
+                </span>
 
-                <Link to="/login">Login</Link>
+                <Link to="/login" className="text-blue-400 text-lg font-semibold">
+                    Login
+                </Link>
 
             </form>
         </div>

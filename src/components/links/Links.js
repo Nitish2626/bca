@@ -1,23 +1,14 @@
-// import "./Links.css";
 import { Link } from "react-router-dom";
 
-const Links=(props)=>{
-    return(
-        <section className="flex flex-col items-center justify-center gap-6">
+const Links = (props) => {
+    return (
 
-            <Link to={props.fybca} className={`w-36 h-10 bg-white flex items-center justify-center text-2xl rounded-md shadow-[2px_2px_10px_0px_grey] text-${props.color} hover:bg-${props.color} hover:text-white`} >
-                Fybca
-            </Link>
+        <Link to={props.to} className={`w-36 h-10 bg-white flex items-center justify-center text-2xl rounded-md shadow-[2px_2px_10px_0px_grey] ${props.color} hover:${props.bgcolor} hover:text-white`} >
 
-            <Link to={props.sybca} className="w-36 h-10 bg-white flex items-center justify-center text-2xl rounded-md shadow-[2px_2px_10px_0px_grey] hover:bg-green-500 hover:text-white" style={{color:props.color}}>
-                Sybca
-            </Link>
+            {props.class}
 
-            <Link to={props.tybca} className="w-36 h-10 bg-white flex items-center justify-center text-2xl rounded-md shadow-[2px_2px_10px_0px_grey] hover:bg-green-500 hover:text-white" style={{color:props.color}}>
-                Tybca
-            </Link>
-            
-        </section>
+        </Link>
+
     );
 };
 export default Links;

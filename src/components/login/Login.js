@@ -85,11 +85,16 @@ const Login = (props) => {
                     <img className="w-6 h-6"></img>
 
                     Login
+
                 </button>
 
-                <span className="mt-2 text-gray-400">OR</span>
+                <span className="my-2 text-gray-400">
+                    OR
+                </span>
 
-                <Link to="/signup" className="text-blue-400 text-lg font-semibold">Signup</Link>
+                <Link to="/signup" className="text-blue-400 text-lg font-semibold">
+                    Signup
+                </Link>
 
             </form>
         </div>
