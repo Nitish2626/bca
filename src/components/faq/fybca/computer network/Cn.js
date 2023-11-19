@@ -30,7 +30,9 @@ const Cn=()=>{
             <Backbtn />
 
             <h3 className="text-orange-400 text-center pt-10 text-lg mb-5 font-semibold">
+
                 Computer Network FAQ
+                
             </h3>
 
             {faqs.map((q,i)=>{
