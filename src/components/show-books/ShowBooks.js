@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ShowBooks=(props)=>{
     return (
-        <div className="w-11/12 flex flex-col items-center justify-center bg-white text-green-500 rounded-lg py-2 shadow-[2px_2px_10px_0px_grey]">
+        <div className="w-11/12 flex flex-col items-center justify-center bg-white text-green-500 rounded-lg py-2 shadow-[2px_2px_10px_0px_grey] hover:shadow-none sm:w-2/4 md:w-2/5 lg:w-1/4">
 
             <img src={props.image} className="w-11/12 h-40 rounded-lg"></img>
 
