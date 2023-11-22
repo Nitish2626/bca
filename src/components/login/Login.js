@@ -21,12 +21,14 @@ const Login = (props) => {
     const [emailspan, setEmailspan] = useState("");
     const [passwordspan, setPasswordspan] = useState("");
 
+    const [outlineColor,setOutlineColor]=useState("outline-green-500");
+
     const emailChange = (e) => {
         setEmail(e.target.value);
 
         if (e.target.value.length == 1 || e.target.value.length > 1) {
             setEmailspan("");
-            document.getElementById("email").style.outlineColor = "rgb(43, 196, 145)";
+            setOutlineColor("outline-green-500");
         }
     };
 
@@ -35,7 +37,7 @@ const Login = (props) => {
 
         if (e.target.value.length == 1 || e.target.value.length > 1) {
             setPasswordspan("");
-            document.getElementById("password").style.outlineColor = "rgb(43, 196, 145)";
+            setOutlineColor("outline-green-500");
         }
     };
 
@@ -44,11 +46,11 @@ const Login = (props) => {
 
         if (email.length == 0 || email.length == null) {
             setEmailspan("* Email cannot be blank");
-            document.getElementById("email").style.outlineColor = "red";
+            setOutlineColor("outline-red-600");
         }
         if (password.length == 0 || password.length == null) {
             setPasswordspan("* Password cannot be blank");
-            document.getElementById("password").style.outlineColor = "red";
+            setOutlineColor("outline-red-600");
         }
 
         try {
@@ -76,9 +78,9 @@ const Login = (props) => {
 
             <form method="post" className="w-11/12 flex flex-col items-center justify-center rounded-lg shadow-[0px_0px_5px_0px_black] py-4" onSubmit={submit}>
 
-                <Section src={mail} type="email" id="email" placeholder="Email" change={emailChange} value={email} span={emailspan} /> 
+                <Section src={mail} type="email" placeholder="Email" change={emailChange} value={email} outlineColor={outlineColor} span={emailspan} /> 
 
-                <Section src={pw} type="password" id="password" placeholder="Password" change={passwordChange} value={password} span={passwordspan} />
+                <Section src={pw} type="password" placeholder="Password" change={passwordChange} value={password} outlineColor={outlineColor} span={passwordspan} />
 
                 <button type="submit" className="w-28 h-9 flex items-center justify-evenly bg-blue-500 rounded-lg text-white mt-2 text-lg shadow-[2px_2px_10px_0px_grey] hover:bg-white hover:text-blue-500">
 

@@ -3,7 +3,7 @@ import CourseCard from "../course card/CourseCard";
 const Sem = (props) => {
     return (
         <>
-            <h2 className="text-center text-green-400 rounded-lg pt-14 pb-5 text-xl font-semibold">
+            <h2 className="text-center text-green-400 rounded-lg pt-14 pb-5 text-xl font-bold">
                 {props.sem}
             </h2>
 
