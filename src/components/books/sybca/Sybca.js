@@ -15,18 +15,25 @@ import architecture from "../../../books pdf/2nd year/Computer System Architectu
 
 const Sybca=()=>{
 
+    const {setNavigate}=useContext(Context);
+    setNavigate("/books");
+
+    const {setShowLoader}=useContext(Context);
+
     const [sem3, setSem3] = useState([]);
     const [sem4, setSem4] = useState([]);
 
     useEffect(() => {
         const api3 = async () => {
             try {
+                setShowLoader(true);
                 let res = await axios.get("http://localhost:2000/sem3")
                 let data = await res.data;
                 Object.assign(await data.books[0], { url: web });
                 Object.assign(await data.books[1], { url: os });
                 Object.assign(await data.books[2], { url: dbms });
                 setSem3(await data.books);
+                setShowLoader(false);
             }
             catch (err) {
                 console.log(err);
@@ -38,6 +45,7 @@ const Sybca=()=>{
     useEffect(() => {
         const api4 = async () => {
             try {
+                setShowLoader(true);
                 let res = await axios.get("http://localhost:2000/sem4")
                 let data = await res.data;
                 Object.assign(await data.books[0], { url: software });
@@ -45,6 +53,7 @@ const Sybca=()=>{
                 Object.assign(await data.books[2], { url: investment });
                 Object.assign(await data.books[3], { url: architecture });
                 setSem4(await data.books);
+                setShowLoader(false);
             }
             catch (err) {
                 console.log(err);
@@ -52,9 +61,6 @@ const Sybca=()=>{
         };
         api4();
     }, []);
-
-    const {setNavigate}=useContext(Context);
-    setNavigate("/books");
 
     return(
         <>

@@ -15,18 +15,25 @@ import evs from "../../../books pdf/1st year/EVS.pdf";
 
 const Fybca=()=>{
 
+    const {setNavigate}=useContext(Context);
+    setNavigate("/books");
+
+    const {setShowLoader}=useContext(Context);
+
     const [sem1, setSem1] = useState([]);
     const [sem2, setSem2] = useState([]);
 
     useEffect(() => {
         const api1 = async () => {
             try {
+                setShowLoader(true);
                 let res = await axios.get("http://localhost:2000/sem1")
                 let data = await res.data;
                 Object.assign(await data.books[0], { url: english });
                 Object.assign(await data.books[1], { url: oops });
                 Object.assign(await data.books[2], { url: maths });
                 setSem1(await data.books);
+                setShowLoader(false);
             }
             catch (err) {
                 console.log(err);
@@ -38,6 +45,7 @@ const Fybca=()=>{
     useEffect(() => {
         const api2 = async () => {
             try {
+                setShowLoader(true);
                 let res = await axios.get("http://localhost:2000/sem2")
                 let data = await res.data;
                 Object.assign(await data.books[0], { url: network });
@@ -45,6 +53,7 @@ const Fybca=()=>{
                 Object.assign(await data.books[2], { url: statistic });
                 Object.assign(await data.books[3], { url: evs });
                 setSem2(await data.books);
+                setShowLoader(false);
             }
             catch (err) {
                 console.log(err);
@@ -52,9 +61,6 @@ const Fybca=()=>{
         };
         api2();
     }, []);
-
-    const {setNavigate}=useContext(Context);
-    setNavigate("/books");
 
     return (
         <>

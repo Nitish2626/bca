@@ -14,12 +14,18 @@ import personality from "../../../books pdf/3rd year/Personality and career skil
 
 const Tybca=()=>{
 
+    const {setNavigate}=useContext(Context);
+    setNavigate("/books");
+
+    const {setShowLoader}=useContext(Context);
+
     const [sem5, setSem5] = useState([]);
     const [sem6, setSem6] = useState([]);
 
     useEffect(() => {
         const api5 = async () => {
             try {
+                setShowLoader(true);
                 let res = await axios.get("http://localhost:2000/sem5")
                 let data = await res.data;
                 Object.assign(await data.books[0], { url: ecommerce });
@@ -27,6 +33,7 @@ const Tybca=()=>{
                 Object.assign(await data.books[2], { url: aptitude });
                 Object.assign(await data.books[3], { url: linux });
                 setSem5(await data.books);
+                setShowLoader(false);
             }
             catch (err) {
                 console.log(err);
@@ -38,12 +45,14 @@ const Tybca=()=>{
     useEffect(() => {
         const api6 = async () => {
             try {
+                setShowLoader(true);
                 let res = await axios.get("http://localhost:2000/sem6")
                 let data = await res.data;
                 Object.assign(await data.books[0], { url: android });
                 Object.assign(await data.books[1], { url: php });
                 Object.assign(await data.books[2], { url: personality });
                 setSem6(await data.books);
+                setShowLoader(false);
             }
             catch (err) {
                 console.log(err);
@@ -51,9 +60,6 @@ const Tybca=()=>{
         };
         api6();
     }, []);
-
-    const {setNavigate}=useContext(Context);
-    setNavigate("/books");
 
     return(
         <>
