@@ -63,7 +63,7 @@ const Tybca=()=>{
 
     return(
         <>
-        <Semester sem1={"SEM 5"} sem2={"SEM 6"} book1={sem5} book2={sem6} />
+        <Semester sem1={"SEM 5"} sem2={"SEM 6"} book1={sem5} book2={sem6} textColor="text-green-500" />
         </>
     );
 }

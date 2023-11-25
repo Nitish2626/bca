@@ -1,43 +1,51 @@
-import { useContext,useState,useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import Backbtn from "../../../back button/Backbtn";
 import QuestionAndAnswer from "../../../qna/QuestionAndAnswer";
 import Context from "../../../context/Context";
 import axios from "axios";
+import Loader from "../../../Loader/Loader";
 
-const Cn=()=>{
+const Cn = () => {
 
-    const {setNavigate}=useContext(Context);
+    const { setNavigate } = useContext(Context);
     setNavigate("/faq/fybca");
 
-    const [faqs,setFaqs]=useState([]);
+    const { setShowLoader } = useContext(Context);
+    const { showLoader } = useContext(Context);
 
-    useEffect(()=>{
-        const fetch=()=>{
+    const [faqs, setFaqs] = useState([]);
+
+    useEffect(() => {
+        const fetch = () => {
+            setShowLoader(true);
             axios.get("http://localhost:2000/cn")
-            .then((res)=>{
-                const faq=res.data;
-                setFaqs(faq);
-            })
-            .catch((e)=>{
-                console.log(e);
-            })
+                .then((res) => {
+                    const faq = res.data;
+                    setFaqs(faq);
+                    setShowLoader(false);
+                })
+                .catch((e) => {
+                    console.log(e);
+                })
         }
         fetch();
-    },[]);
+    }, []);
 
-    return(
+    return (
         <div>
             <Backbtn />
 
             <h3 className="text-orange-400 text-center pt-10 text-lg mb-5 font-semibold">
 
                 Computer Network FAQ
-                
+
             </h3>
 
-            {faqs.map((q,i)=>{
-                return <QuestionAndAnswer key={i} question={q.question} answer={q.answer} year={q.year} />
-            })}
+            <section className="w-full flex flex-col items-center justify-center">
+                {showLoader ? <Loader borderColor="border-orange-400" /> : faqs.map((q, i) => {
+                    return <QuestionAndAnswer key={i} question={q.question} answer={q.answer} year={q.year} />
+                })}
+            </section>
 
         </div>
     );

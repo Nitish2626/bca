@@ -64,7 +64,7 @@ const Sybca=()=>{
 
     return(
         <>
-        <Semester sem1={"SEM 3"} sem2={"SEM 4"} book1={sem3} book2={sem4} />
+        <Semester sem1={"SEM 3"} sem2={"SEM 4"} book1={sem3} book2={sem4} textColor="text-green-500" />
         </>
     );
 }

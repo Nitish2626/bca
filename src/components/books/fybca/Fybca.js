@@ -64,7 +64,7 @@ const Fybca=()=>{
 
     return (
         <>
-        <Semester sem1="SEM 1" sem2="SEM 2" book1={sem1} book2={sem2} />
+        <Semester sem1="SEM 1" sem2="SEM 2" book1={sem1} book2={sem2} textColor="text-green-500" />
         </>
     );
 }

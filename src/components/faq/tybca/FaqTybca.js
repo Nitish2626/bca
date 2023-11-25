@@ -50,7 +50,7 @@ const FaqTybca=()=>{
 
     return(
         <div>      
-            <SemContainer sem1="Sem 5" sem2="Sem 6" text="TYBCA" sub1={subject1} sub2={subject2} />
+            <SemContainer sem1="Sem 5" sem2="Sem 6" text="TYBCA" sub1={subject1} sub2={subject2} textColor="text-orange-400" />
         </div>
     );
 };

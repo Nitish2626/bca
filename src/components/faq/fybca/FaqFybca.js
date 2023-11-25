@@ -55,7 +55,7 @@ const FaqFybca=()=>{
 
     return(
         <div>      
-            <SemContainer sem1="Sem 1" sem2="Sem 2" text="FYBCA" sub1={subject1} sub2={subject2} />
+            <SemContainer sem1="Sem 1" sem2="Sem 2" text="FYBCA" sub1={subject1} sub2={subject2} textColor="text-orange-400" />
         </div>
     );
 };

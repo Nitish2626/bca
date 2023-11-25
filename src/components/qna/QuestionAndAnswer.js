@@ -11,7 +11,7 @@ const QuestionAndAnswer = (props) => {
     };
 
     return (
-        <div className="w-full flex flex-col items-center justify-center mb-2">
+        <div className="w-full flex flex-col items-center justify-center mb-4">
 
             <section className="w-11/12 flex flex-col rounded-md shadow-[1px_1px_10px_0px_grey]" onClick={s}>
 
