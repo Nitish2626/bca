@@ -11,7 +11,7 @@ const Top = () => {
 
                 <button className="flex flex-col items-center justify-center bg-slate-300 rounded-md px-2 hover:bg-slate-200" onClick={()=>{setShow((prev)=>!prev)}}>
 
-                    <img src={user} className="w-5 h-5"></img>
+                    <img src={user} className="w-5 h-5" alt="user icon"></img>
 
                     <h1 className="text-lg overflow-hidden text-ellipsis">Username</h1>
 
@@ -19,7 +19,7 @@ const Top = () => {
 
             </div>
 
-            {show && <button className="w-20 h-9 fixed mt-1 right-3 bg-blue-400 text-white rounded-md text-lg shadow-[1px_1px_10px_0px_grey] hover:text-blue-400 hover:bg-white">
+            {show && <button className="w-20 h-9 fixed mt-1 right-3 bg-blue-400 text-white rounded-md text-lg shadow-[1px_1px_10px_0px_grey] z-20 hover:text-blue-400 hover:bg-white">
                 Logout
             </button>
             }

@@ -5,9 +5,10 @@ const QuestionAndAnswer = (props) => {
 
     const [show, setShow] = useState(false);
     const [rotate, setRotate] = useState(0);
+
     const s = () => {
         setShow((prev) => !prev);
-        setRotate((prev) => prev - 180);
+        setRotate((prev) => prev === 0 ? prev= 0-180 : prev=0);
     };
 
     return (
@@ -19,7 +20,7 @@ const QuestionAndAnswer = (props) => {
 
                     <h4 className="text-lg pr-1">{props.question}</h4>
 
-                    <img src={da} style={{ rotate: `${rotate}deg` }} className="w-3 h-3 flex items-center justify-center transition-all duration-200">
+                    <img src={da} style={{rotate:`${rotate}deg`}} className={`w-3 h-3 flex items-center justify-center transition-all duration-200`} alt="dropdown img">
                     </img>
 
                 </section>
