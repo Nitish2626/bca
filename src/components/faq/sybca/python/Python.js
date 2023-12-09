@@ -1,9 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import Backbtn from "../../../back button/Backbtn";
-import QuestionAndAnswer from "../../../qna/QuestionAndAnswer";
 import Context from "../../../context/Context";
 import axios from "axios";
-import Loader from "../../../Loader/Loader";
+import SubjectsContainer from "../../../subjects container/SubjectsContainer";
 
 const Python = () => {
 
@@ -32,20 +30,9 @@ const Python = () => {
     }, []);
 
     return (
-        <div>
-            <Backbtn />
-
-            <h3 className="text-orange-400 text-center pt-10 text-lg mb-5 font-semibold">
-                Python Programming FAQ
-            </h3>
-
-            <section className="w-full flex flex-col items-center justify-center">
-                {showLoader ? <Loader borderColor="border-orange-400" /> : faqs.map((q, i) => {
-                    return <QuestionAndAnswer key={i} question={q.question} answer={q.answer} year={q.year} />
-                })}
-            </section>
-
-        </div>
+        <>
+            <SubjectsContainer headingColor="text-orange-400" subjectName="Python Programming FAQ" loader={showLoader} loaderBorderColor="border-orange-400" subject={faqs} />
+        </>
     );
 };
 export default Python;

@@ -4,6 +4,9 @@ import Fybca from "./components/books/fybca/Fybca";
 import Sybca from "./components/books/sybca/Sybca";
 import Tybca from './components/books/tybca/Tybca';
 import QuestionPapers from './components/question-papers/QuestionPapers';
+import PyqFybca from "./components/question-papers/fybca/PyqFybca";
+import PyqSybca from "./components/question-papers/sybca/PyqSybca";
+import PyqTybca from "./components/question-papers/tybca/PyqTybca";
 import Faq from './components/faq/Faq';
 import Videos from './components/videos/Videos';
 import Feedback from './components/feedback/Feedback';
@@ -42,6 +45,7 @@ import Android from './components/faq/tybca/android programming/Android';
 import Php from './components/faq/tybca/php programming/Php';
 import Pcs from './components/faq/tybca/personality and career skills/Pcs';
 
+
 function App() {
 
   const [hideButton, setHideButton] = useState(true);
@@ -71,9 +75,11 @@ function App() {
             <Route path="/books/tybca" element={<Tybca />}></Route>
 
             <Route path="/pyq" element={<QuestionPapers />}></Route>
+            <Route path="/pyq/fybca" element={<PyqFybca />}></Route>
+            <Route path="/pyq/sybca" element={<PyqSybca />}></Route>
+            <Route path="/pyq/tybca" element={<PyqTybca />}></Route>
 
             <Route path="/faq" element={<Faq />}></Route>
-
             <Route path="/faq/fybca" element={<FaqFybca />}></Route>
             <Route path="/faq/fybca/english" element={<English />}></Route>  
             <Route path="/faq/fybca/maths" element={<Maths />}></Route> 
