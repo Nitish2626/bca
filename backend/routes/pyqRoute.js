@@ -1,0 +1,55 @@
+import { Router } from "express";
+import { english } from "../controllers/english";
+import { create } from "../controllers/create";
+import { maths } from "../controllers/maths";
+import { psc } from "../controllers/psc";
+import { oops } from "../controllers/oops";
+import { statistics } from "../controllers/statistics";
+import { dsa } from "../controllers/dsa";
+import { cn } from "../controllers/cn";
+import { evs } from "../controllers/evs";
+import { webtech } from "../controllers/webtech";
+import { rdbms } from "../controllers/rdbms";
+import { python } from "../controllers/python";
+import { os } from "../controllers/os";
+import { csa } from "../controllers/csa";
+import { fis } from "../controllers/fis";
+import { java } from "../controllers/java";
+import { se } from "../controllers/se";
+import { aj } from "../controllers/advance";
+import { android } from "../controllers/android";
+import { ecommerce } from "../controllers/ecommerce";
+import { linux } from "../controllers/linux";
+import { pcs } from "../controllers/pcs";
+import { php } from "../controllers/php";
+import { qa } from "../controllers/qa";
+
+const pyqRouter=Router();
+
+pyqRouter.post("/",create);
+
+pyqRouter.get("/english",english);
+pyqRouter.get("/maths",maths);
+pyqRouter.get("/psc",psc);
+pyqRouter.get("/c++",oops);
+pyqRouter.get("/statistics",statistics);
+pyqRouter.get("/dsa",dsa);
+pyqRouter.get("/cn",cn);
+pyqRouter.get("/evs",evs);
+pyqRouter.get("/webtech",webtech);
+pyqRouter.get("/dbms",rdbms);
+pyqRouter.get("/python",python);
+pyqRouter.get("/os",os);
+pyqRouter.get("/csa",csa);
+pyqRouter.get("/fis",fis);
+pyqRouter.get("/java",java);
+pyqRouter.get("/se",se);
+pyqRouter.get("/advance",aj);
+pyqRouter.get("/android",android);
+pyqRouter.get("/ecommerce",ecommerce);
+pyqRouter.get("/linux",linux);
+pyqRouter.get("/pcs",pcs);
+pyqRouter.get("/php",php);
+pyqRouter.get("/qa",qa);
+
+export default pyqRouter;
