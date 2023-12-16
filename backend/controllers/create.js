@@ -1,6 +1,11 @@
-import { Pyq } from "../models/pyq";
+import { Pyq } from "../models/pyq.js";
 
-export const create=async(req,res)=>{
-    const newPyq=await Pyq.create(await req.body);
-    res.send(newPyq);
+export const addPyq = async (req, res) => {
+    try {
+        const newPyq = await Pyq.create(await req.body);
+        res.status(200).send(newPyq);
+    }
+    catch(err){
+        console.log("PYQ Creating ERROR",err);
+    }   
 };

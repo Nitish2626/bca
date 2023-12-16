@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const pyq=mongoose.Schema({
+const pyqSchema=mongoose.Schema({
     subject:{
         type:String
     },
@@ -10,9 +10,12 @@ const pyq=mongoose.Schema({
     storage:{
         type:String
     },
+    year:{
+        type:Number
+    },
     url:{
         type:String
     }
 });
 
-export const Pyq=mongoose.model("pyq",pyq);
+export const Pyq=mongoose.model("pyq",pyqSchema);

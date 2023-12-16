@@ -1,6 +1,11 @@
-import { Pyq } from "../models/pyq";
+import { Pyq } from "../models/pyq.js";
 
 export const maths=async (req,res)=>{
-    const pyqs=await Pyq.find({subject:"Maths"});
-    res.send(pyqs);
+    try{
+        const pyqs=await Pyq.find({subject:"Maths"});
+        res.status(200).send(pyqs);
+    }
+    catch(err){
+        console.log("Maths PYQ Finding ERROR",err);
+    }
 };
