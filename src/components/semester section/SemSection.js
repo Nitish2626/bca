@@ -14,7 +14,7 @@ const SemSection=(props)=>{
             <section className={`w-full flex items-center justify-center flex-wrap gap-4 ${props.mb} `}>
 
                 {showLoader ? <Loader borderColor="border-green-500" /> : props.book.map((i,index)=>{
-                   return <ShowBooks key={index} subject={i.subject} size={i.size} storage={i.storage} url={i.url} image={i.image_url} />
+                   return <ShowBooks key={index} subject={i.subject} size={i.size} storage={i.storage} url={i.url} image={i.image_url} color="text-green-500" />
                 })}
 
             </section>

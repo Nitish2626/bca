@@ -44,7 +44,14 @@ import Linux from './components/faq/tybca/linux administration/Linux';
 import Android from './components/faq/tybca/android programming/Android';
 import Php from './components/faq/tybca/php programming/Php';
 import Pcs from './components/faq/tybca/personality and career skills/Pcs';
-
+import Eng from "./components/question-papers/fybca/english/Eng";
+import Mat from "./components/question-papers/fybca/maths/Mat";
+import P from "./components/question-papers/fybca/psc/P";
+import Oop from "./components/question-papers/fybca/oops and c++/Oop";
+import Statis from "./components/question-papers/fybca/statistics/Statis";
+import ComNet from "./components/question-papers/fybca/computer networks/ComNet";
+import Ds from "./components/question-papers/fybca/dsa/Ds";
+import EnvStu from "./components/question-papers/fybca/evs/EnvStu";
 
 function App() {
 
@@ -76,6 +83,15 @@ function App() {
 
             <Route path="/pyq" element={<QuestionPapers />}></Route>
             <Route path="/pyq/fybca" element={<PyqFybca />}></Route>
+            <Route path="/pyq/fybca/english" element={<Eng />}></Route>
+            <Route path="/pyq/fybca/maths" element={<Mat />}></Route>
+            <Route path="/pyq/fybca/psc" element={<P />}></Route>
+            <Route path="/pyq/fybca/oops" element={<Oop />}></Route>
+            <Route path="/pyq/fybca/statistics" element={<Statis />}></Route>
+            <Route path="/pyq/fybca/cn" element={<ComNet />}></Route>
+            <Route path="/pyq/fybca/dsa" element={<Ds />}></Route>
+            <Route path="/pyq/fybca/evs" element={<EnvStu />}></Route>
+
             <Route path="/pyq/sybca" element={<PyqSybca />}></Route>
             <Route path="/pyq/tybca" element={<PyqTybca />}></Route>
 

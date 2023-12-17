@@ -17,21 +17,27 @@ const Cn = () => {
         const fetch = () => {
             setShowLoader(true);
             axios.get("http://localhost:2000/cn")
-            .then((res) => {
-                const faq = res.data;
-                setFaqs(faq);
-                setShowLoader(false);
-            })
-            .catch((e) => {
-                console.log(e);
-            })
+                .then((res) => {
+                    const faq = res.data;
+                    setFaqs(faq);
+                    setShowLoader(false);
+                })
+                .catch((e) => {
+                    console.log(e);
+                })
         }
         fetch();
     }, []);
 
     return (
         <>
-            <SubjectsContainer headingColor="text-orange-400" subjectName="Computer Networks FAQ" loader={showLoader} loaderBorderColor="border-orange-400" subject={faqs} />
+            <SubjectsContainer
+                headingColor="text-orange-400"
+                subjectName="Computer Networks FAQ"
+                loader={showLoader}
+                loaderBorderColor="border-orange-400"
+                subject={faqs}
+            />
         </>
     );
 };
