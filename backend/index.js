@@ -6,14 +6,14 @@ import cors from "cors";
 import userRouter from "./routes/userRoute.js";
 import faqRouter from "./routes/faqRoute.js";
 import pyqRouter from "./routes/pyqRoute.js";
-// import cookieParser from "cookie-parser";
+import cookieParser from "cookie-parser";
 
 const port=process.env.PORT || 2000;
 const app=express();
 
 app.use(cors());
 app.use(express.json());
-// app.use(cookieParser);
+app.use(cookieParser());
 
 app.use(bookRouter);
 app.use(userRouter);

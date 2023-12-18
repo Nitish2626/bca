@@ -52,6 +52,7 @@ import Statis from "./components/question-papers/fybca/statistics/Statis";
 import ComNet from "./components/question-papers/fybca/computer networks/ComNet";
 import Ds from "./components/question-papers/fybca/dsa/Ds";
 import EnvStu from "./components/question-papers/fybca/evs/EnvStu";
+import Pyt from "./components/question-papers/sybca/python/Pyt";
 
 function App() {
 
@@ -93,6 +94,8 @@ function App() {
             <Route path="/pyq/fybca/evs" element={<EnvStu />}></Route>
 
             <Route path="/pyq/sybca" element={<PyqSybca />}></Route>
+            <Route path="/pyq/sybca/python" element={<Pyt />}></Route>
+
             <Route path="/pyq/tybca" element={<PyqTybca />}></Route>
 
             <Route path="/faq" element={<Faq />}></Route>

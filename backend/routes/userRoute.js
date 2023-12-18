@@ -22,6 +22,7 @@ userRouter.post("/signup", async (req, res) => {
 
             try {
                 const token=jwt.sign(userId,process.env.JWT_SECRET_KEY);
+                res.cookie("Auth-token",token,{httpOnly:true});
             }
             catch (e) {
                 console.log(e);
@@ -53,7 +54,7 @@ userRouter.post("/login", async (req, res) => {
         if (check && comparePw) {
             try{
                 const token=jwt.sign(check._id.toString(),process.env.JWT_SECRET_KEY);
-                res.cookie("token",token,{httpOnly:true});
+                res.cookie("Auth-token",token,{httpOnly:true});
                 res.send("Success");
             }
             catch(e){
