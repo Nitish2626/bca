@@ -53,6 +53,20 @@ import ComNet from "./components/question-papers/fybca/computer networks/ComNet"
 import Ds from "./components/question-papers/fybca/dsa/Ds";
 import EnvStu from "./components/question-papers/fybca/evs/EnvStu";
 import Pyt from "./components/question-papers/sybca/python/Pyt";
+import Web from "./components/question-papers/sybca/webtech/Web";
+import Opsy from "./components/question-papers/sybca/operating system/Opsy";
+import Rdbms from "./components/question-papers/sybca/rdbms/Rdbms";
+import SofEng from "./components/question-papers/sybca/software engineering/SofEng";
+import Jva from "./components/question-papers/sybca/java/Jva";
+import FinSki from "./components/question-papers/sybca/financial and investment skills/FinSki";
+import ComSys from "./components/question-papers/sybca/computer system architecture/ComSys";
+import Ecom from "./components/question-papers/tybca/ecommerce/Ecom";
+import AJ from "./components/question-papers/tybca/advance java/AJ";
+import QuaApi from "./components/question-papers/tybca/quantitative aptitude/QuaApi";
+import Lin from "./components/question-papers/tybca/linux administration/Lin";
+import And from "./components/question-papers/tybca/android programming/And";
+import Hpp from "./components/question-papers/tybca/php programming/Hpp";
+import PerCar from "./components/question-papers/tybca/personality and career skills/PerCar";
 
 function App() {
 
@@ -95,8 +109,22 @@ function App() {
 
             <Route path="/pyq/sybca" element={<PyqSybca />}></Route>
             <Route path="/pyq/sybca/python" element={<Pyt />}></Route>
+            <Route path="/pyq/sybca/webtech" element={<Web />}></Route>
+            <Route path="/pyq/sybca/os" element={<Opsy />}></Route>
+            <Route path="/pyq/sybca/rdbms" element={<Rdbms />}></Route>
+            <Route path="/pyq/sybca/se" element={<SofEng />}></Route>
+            <Route path="/pyq/sybca/java" element={<Jva />}></Route>
+            <Route path="/pyq/sybca/fis" element={<FinSki />}></Route>
+            <Route path="/pyq/sybca/csa" element={<ComSys />}></Route>
 
             <Route path="/pyq/tybca" element={<PyqTybca />}></Route>
+            <Route path="/pyq/tybca/ecommerce" element={<Ecom />}></Route>
+            <Route path="/pyq/tybca/advance" element={<AJ />}></Route>
+            <Route path="/pyq/tybca/qa" element={<QuaApi />}></Route>
+            <Route path="/pyq/tybca/linux" element={<Lin />}></Route>
+            <Route path="/pyq/tybca/android" element={<And />}></Route>
+            <Route path="/pyq/tybca/php" element={<Hpp />}></Route>
+            <Route path="/pyq/tybca/pcs" element={<PerCar />}></Route>
 
             <Route path="/faq" element={<Faq />}></Route>
             <Route path="/faq/fybca" element={<FaqFybca />}></Route>

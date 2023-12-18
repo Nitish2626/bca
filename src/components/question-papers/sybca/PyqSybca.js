@@ -22,7 +22,7 @@ const PyqSybca = () => {
         },
         {
             name:"Introduction to RDBMS",
-            link:"/pyq/sybca/dbms",
+            link:"/pyq/sybca/rdbms",
             bgcolor:"bg-green-400"
         }
     ]

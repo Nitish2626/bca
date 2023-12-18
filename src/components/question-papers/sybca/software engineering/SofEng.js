@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import Context from "../../../context/Context";
 import PyqContainer from "../../../pyq container/PyqContainer";
 
-const Pyt = () => {
+const SofEng = () => {
 
     const { setNavigate } = useContext(Context);
     setNavigate("/pyq/sybca");
@@ -15,7 +15,7 @@ const Pyt = () => {
     useEffect(() => {
         const fetchPyq = async () => {
             setShowLoader(true);
-            const pyqs = await fetch("http://localhost:2000/pyt");
+            const pyqs = await fetch("http://localhost:2000/sofeng");
             const data = await pyqs.json();
             setPyq(data);
             setShowLoader(false);
@@ -23,10 +23,11 @@ const Pyt = () => {
         fetchPyq();
     }, []);
 
+
     return (
         <PyqContainer
             headingColor="text-blue-500"
-            subjectName="Python Programming PYQ's"
+            subjectName="Software Engineering PYQ's"
             loader={showLoader}
             loaderBorderColor="border-blue-500"
             subject={pyqs}
@@ -34,4 +35,4 @@ const Pyt = () => {
     );
 }
 
-export default Pyt;
+export default SofEng;
