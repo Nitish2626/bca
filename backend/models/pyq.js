@@ -13,7 +13,7 @@ const pyqSchema=mongoose.Schema({
     year:{
         type:Number
     },
-    url:{
+    image_url:{
         type:String
     }
 });
