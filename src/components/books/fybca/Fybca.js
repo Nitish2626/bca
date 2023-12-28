@@ -1,4 +1,4 @@
-import { useState,useEffect,useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import Context from "../../context/Context";
 import Semester from "../../semesters/Semester";
 import axios from "axios";
@@ -12,13 +12,12 @@ import dsa from "../../../books pdf/1st year/Data Structures book.pdf";
 import statistic from "../../../books pdf/1st year/Statistical Techniques.pdf";
 import evs from "../../../books pdf/1st year/EVS.pdf";
 
+const Fybca = () => {
 
-const Fybca=()=>{
-
-    const {setNavigate}=useContext(Context);
+    const { setNavigate } = useContext(Context);
     setNavigate("/books");
 
-    const {setShowLoader}=useContext(Context);
+    const { setShowLoader } = useContext(Context);
 
     const [sem1, setSem1] = useState([]);
     const [sem2, setSem2] = useState([]);
@@ -63,9 +62,13 @@ const Fybca=()=>{
     }, []);
 
     return (
-        <>
-        <Semester sem1="SEM 1" sem2="SEM 2" book1={sem1} book2={sem2} textColor="text-green-500" />
-        </>
+        <Semester
+            sem1="SEM 1"
+            sem2="SEM 2"
+            book1={sem1}
+            book2={sem2}
+            textColor="text-green-500"
+        />
     );
 }
 export default Fybca;
